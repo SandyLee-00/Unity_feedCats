@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("makeFood", 0.0f, 0.2f);
+        InvokeRepeating("makeFood", 0.0f, 0.1f);
         InvokeRepeating("makeCat", 0.0f, 1.0f);
     }
 
@@ -44,6 +44,16 @@ public class GameManager : MonoBehaviour
     void makeCat()
     {
         Instantiate(catNormal);
+        if(level == 1)
+        {
+            float p = Random.Range(0, 10);
+            if (p < 2) Instantiate(catNormal);
+        }
+        if (level >= 2)
+        {
+            float p = Random.Range(0, 10);
+            if (p < 5) Instantiate(catNormal);
+        }
     }
 
     public void gameOver()
