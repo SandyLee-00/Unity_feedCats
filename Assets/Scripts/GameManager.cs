@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class GameManager : MonoBehaviour
     public GameObject food;
     public GameObject dog;
     public GameObject catNormal;
-
     public GameObject replayBtn;
+
+    public Text txtLevel;
+    public GameObject barFrontLevel;
+
+    int level = 0;
+    int cat = 0;
 
     private void Awake()
     {
@@ -44,5 +50,13 @@ public class GameManager : MonoBehaviour
     {
         replayBtn.SetActive(true);
         Time.timeScale = 0.0f;
+    }
+
+    public void addCat()
+    {
+        cat += 1;
+        level = cat / 5;
+        txtLevel.text = level.ToString();
+        barFrontLevel.transform.localScale = new Vector3((cat - level * 5) / 5.0f, 1.0f, 1.0f);
     }
 }

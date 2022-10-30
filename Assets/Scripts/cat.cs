@@ -6,6 +6,7 @@ public class cat : MonoBehaviour
 {
     float full = 5.0f;
     float energy = 0.0f;
+    bool isFull = false;
 
     void Start()
     {
@@ -51,10 +52,13 @@ public class cat : MonoBehaviour
                 Destroy(collision.gameObject);
                 gameObject.transform.Find("hungry/Canvas/bar_front").transform.localScale = new Vector3(energy / full, 1.0f, 1.0f);
             }
-            else
+            else if(isFull == false)
             {
+                GameManager.GM.addCat();
                 gameObject.transform.Find("hungry").gameObject.SetActive(false);
                 gameObject.transform.Find("full").gameObject.SetActive(true);
+
+                isFull = true;
             }
         }
     }
