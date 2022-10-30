@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager GM;
+
     public GameObject food;
     public GameObject dog;
     public GameObject catNormal;
+
+    public GameObject replayBtn;
+
+    private void Awake()
+    {
+        GM = this;
+    }
 
     void Start()
     {
@@ -29,5 +38,11 @@ public class GameManager : MonoBehaviour
     void makeCat()
     {
         Instantiate(catNormal);
+    }
+
+    public void gameOver()
+    {
+        replayBtn.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 }

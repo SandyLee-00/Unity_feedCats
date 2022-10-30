@@ -20,6 +20,11 @@ public class cat : MonoBehaviour
         if(energy < full)
         {
             transform.position += new Vector3(0.0f, -0.05f, 0.0f);
+
+            if(transform.position.y < -16.0f)
+            {
+                GameManager.GM.gameOver();
+            }
         }
         else if(energy >= full)
         {
