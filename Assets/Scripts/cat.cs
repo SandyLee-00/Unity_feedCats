@@ -17,7 +17,23 @@ public class cat : MonoBehaviour
 
     void Update()
     {
-        transform.position += new Vector3(0.0f, -0.05f, 0.0f);
+        if(energy < full)
+        {
+            transform.position += new Vector3(0.0f, -0.05f, 0.0f);
+        }
+        else if(energy >= full)
+        {
+            if(transform.position.x > 0)
+            {
+                transform.position += new Vector3(0.05f, 0.0f, 0.0f);
+            }
+            else if(transform.position.x <= 0)
+            {
+                transform.position += new Vector3(-0.05f, 0.0f, 0.0f);
+            }
+            Destroy(gameObject, 3.0f);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
