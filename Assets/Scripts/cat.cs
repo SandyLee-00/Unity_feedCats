@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class cat : MonoBehaviour
 {
+    public int type;
+
     float full = 5.0f;
     float energy = 0.0f;
     bool isFull = false;
@@ -13,6 +15,15 @@ public class cat : MonoBehaviour
         float posX = Random.Range(-8.5f, 8.5f);
         float posY = 30.0f;
         transform.position = new Vector3(posX, posY, 0);
+
+        if(type == 0)
+        {
+            full = 5.0f;
+        }
+        if(type == 1)
+        {
+            full = 10.0f;
+        }
         
     }
 
@@ -20,9 +31,16 @@ public class cat : MonoBehaviour
     {
         if(energy < full)
         {
-            transform.position += new Vector3(0.0f, -0.05f, 0.0f);
+            if(type == 0)
+            {
+                transform.position += new Vector3(0.0f, -0.05f, 0.0f);
+            }
+            else if (type == 1)
+            {
+                transform.position += new Vector3(0.0f, -0.03f, 0.0f);
+            }
 
-            if(transform.position.y < -16.0f)
+            if (transform.position.y < -16.0f)
             {
                 GameManager.GM.gameOver();
             }
