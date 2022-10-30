@@ -6,12 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject food;
     public GameObject dog;
-    public GameObject cat_normal;
+    public GameObject catNormal;
 
     void Start()
     {
         InvokeRepeating("makeFood", 0.0f, 0.2f);
-        InvokeRepeating("makeCat", 0.0f, 1.2f);
+        InvokeRepeating("makeCat", 0.0f, 1.0f);
     }
 
     void Update()
@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     void makeCat()
     {
-        Instantiate(cat_normal);
+        Instantiate(catNormal);
     }
 }

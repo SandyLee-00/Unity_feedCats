@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ea6f33e1b9c3d44abbcbc5516478c730, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 2838200600225221045, guid: a2c4ffeded5d54421832ab717d6b6e60, type: 3}
   dog: {fileID: 1418218934}
-  cat_normal: {fileID: 5574546240320465273, guid: 1457b6ff216e44e0d8c88578ecdefcb6, type: 3}
+  catNormal: {fileID: 5574546240320465273, guid: 1457b6ff216e44e0d8c88578ecdefcb6, type: 3}
 --- !u!4 &1513306147
 Transform:
   m_ObjectHideFlags: 0
