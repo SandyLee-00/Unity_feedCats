@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         InvokeRepeating("makeFood", 0.0f, 0.1f);
         InvokeRepeating("makeCat", 0.0f, 1.0f);
+        Time.timeScale = 1.0f;
     }
 
     void Update()
