@@ -1005,6 +1005,7 @@ MonoBehaviour:
   dog: {fileID: 1418218934}
   catNormal: {fileID: 5574546240320465273, guid: 1457b6ff216e44e0d8c88578ecdefcb6, type: 3}
   catFat: {fileID: 6133108031875321728, guid: dd901155ccc0e40eb843ec2588ba339d, type: 3}
+  catPirate: {fileID: 6319614236491989922, guid: a5ae1e46cf5194bf08fb11be3cb863c6, type: 3}
   replayBtn: {fileID: 1313669946}
   txtLevel: {fileID: 1062007673}
   barFrontLevel: {fileID: 680435956}

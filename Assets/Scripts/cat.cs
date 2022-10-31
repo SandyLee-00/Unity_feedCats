@@ -39,6 +39,10 @@ public class cat : MonoBehaviour
             {
                 transform.position += new Vector3(0.0f, -0.03f, 0.0f);
             }
+            else if (type == 2)
+            {
+                transform.position += new Vector3(0.0f, -0.1f, 0.0f);
+            }
 
             if (transform.position.y < -16.0f)
             {

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject dog;
     public GameObject catNormal;
     public GameObject catFat;
+    public GameObject catPirate;
     public GameObject replayBtn;
 
     public Text txtLevel;
@@ -56,11 +57,18 @@ public class GameManager : MonoBehaviour
             float p = Random.Range(0, 10);
             if (p < 5) Instantiate(catNormal);
         }
-        else if (level >= 3)
+        else if (level == 3)
         {
             float p = Random.Range(0, 10);
             if (p < 5) Instantiate(catNormal);
             Instantiate(catFat);
+        }
+        else if (level >= 4)
+        {
+            float p = Random.Range(0, 10);
+            if (p < 5) Instantiate(catNormal);
+            Instantiate(catFat);
+            Instantiate(catPirate);
         }
     }
 
